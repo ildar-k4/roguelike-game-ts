@@ -1,0 +1,65 @@
+.field {
+    position: relative;
+    width: 1280px; /* 40 * 32px */
+    height: 768px; /* 24 * 32px */
+    margin: 0 auto;
+    border: 1px solid #000;
+    background: #000;
+    overflow: hidden;
+}
+
+.tile {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+.wall {
+    background-image: url('/image/tile-W.png');
+}
+
+.floor {
+    background-image: url('/image/tile-.png');
+}
+
+.hero {
+    background-image: url('/image/tile-P.png');
+}
+
+.enemy {
+    background-image: url('/image/tile-E.png');
+}
+
+.potion {
+    background-image: url('/image/tile-HP.png');
+}
+
+.sword {
+    background-image: url('/image/tile-SW.png');
+}
+.health {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background-color: green;
+    transition: width 0.2s;
+}
+
+.enemy-health {
+    background-color: red;
+}
+
+.game-over, .win {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: none;
+}
